@@ -1,5 +1,9 @@
 import './style.css'
 
+let cityText = document.getElementById('city')
+let countryImg = document.getElementById('countryImg')
+const tempText = document.getElementById('tempText')
+
 
 async function getWeather(city){
   let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=cbab13e08da6db0c314fd99a37f57831`)
@@ -17,9 +21,11 @@ async function setWeatherParams(city){
   let cityWeather = await getWeather(city)
   let countryFlag = await getCountryImg(cityWeather.sys.country)
   const {name, main: tempData} = cityWeather
+  cityText.innerHTML = name
+  countryImg.src = countryFlag
+  tempText.innerText = tempData.temp
+
   console.log(cityWeather, countryFlag, name, tempData);
 }
 
-const bucaramanga = await setWeatherParams('bucaramanga')
-
-await setWeatherParams('bucaramanga')
+await setWeatherParams('london')

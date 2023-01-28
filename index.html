@@ -10,6 +10,7 @@
     <div id="app">
       <nav class="navbar bg-base-300 text-lg flex justify-between">
         <a class="btn btn-ghost normal-case text-xl">JDev</a>
+        <button id="unitsBtn" class="btn btn-warning btn-sm text-white">°F</button>
       </nav>
       <main class="flex flex-col gap-4 justify-center items-center mt-4">
         <form id="weatherForm" class="form-control flex flex-row gap-2">
@@ -21,10 +22,10 @@
           <div class="card-body">
             <h2 class="card-title" id="city">
             </h2>
-            <p>Temperature: <span class="font-bold" id="tempText"></span></p>
-            <p>Feels like: <span id="tempText"></span></p>
-            <p>Min temperature: <span id="tempText"></span></p>
-            <p>Max temperature: <span id="tempText"></span></p>
+            <p>Temperature: <span class="font-bold weatherText" id="tempText"></span></p>
+            <p>Feels like: <span class="font-bold weatherText" id="feelsLikeText"></span></p>
+            <p>Min temperature: <span class="font-bold weatherText" id="minTempText"></span></p>
+            <p>Max temperature: <span class="font-bold weatherText" id="maxTempText"></span></p>
             <div class="card-actions justify-end">
               <div class="badge badge-outline">Fashion</div> 
               <div class="badge badge-outline">Products</div>

@@ -12,16 +12,19 @@
         <a class="btn btn-ghost normal-case text-xl">JDev</a>
       </nav>
       <main class="flex flex-col gap-4 justify-center items-center mt-4">
-        <div class="form-control flex flex-row gap-2">
-          <input type="text" placeholder="London" class="input input-bordered" />
+        <form id="weatherForm" class="form-control flex flex-row gap-2">
+          <input type="text" id="inputText" placeholder="London" class="input input-bordered" />
           <button class="btn glass">Submit</button>
-        </div>
+        </form>
         <div class="card w-80 bg-base-100 shadow-xl">
           <figure><img id="countryImg" style="object-fit: contain" src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
           <div class="card-body">
             <h2 class="card-title" id="city">
             </h2>
-            <p>Temperature: <span id="tempText"></span></p>
+            <p>Temperature: <span class="font-bold" id="tempText"></span></p>
+            <p>Feels like: <span id="tempText"></span></p>
+            <p>Min temperature: <span id="tempText"></span></p>
+            <p>Max temperature: <span id="tempText"></span></p>
             <div class="card-actions justify-end">
               <div class="badge badge-outline">Fashion</div> 
               <div class="badge badge-outline">Products</div>

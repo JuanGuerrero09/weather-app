@@ -15,6 +15,7 @@
     "vite": "^4.0.0"
   },
   "dependencies": {
+    "celsius": "^1.0.2",
     "daisyui": "^2.47.0"
   }
 }

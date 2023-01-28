@@ -3,6 +3,15 @@ import './style.css'
 let cityText = document.getElementById('city')
 let countryImg = document.getElementById('countryImg')
 const tempText = document.getElementById('tempText')
+const inputText = document.getElementById('inputText')
+const weatherForm = document.getElementById('weatherForm')
+
+weatherForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  let inputCity = inputText.value?inputText.value:undefined
+  inputText.value = ""
+  setWeatherParams(inputCity)
+})
 
 
 async function getWeather(city){
